@@ -1,0 +1,26 @@
+{
+  "name": "komodo/configurator",
+  "description": "A simple settings provider",
+  "require": {
+    "komodo/logger": "dev-main"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "10.4.x-dev"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Komodo\\Configurator\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit tests/ProviderTest.php"
+  },
+  "authors": [
+    {
+      "name": "Jhonnata Nascimento da Paixão",
+      "email": "114832000+jhownpaixao@users.noreply.github.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}

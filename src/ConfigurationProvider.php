@@ -58,9 +58,9 @@ class ConfigurationProvider
         return $arr ?: $object;
     }
 
-    private static function loadEnviroment($path = './', $file = '.env')
+    private static function loadEnviroment($path = '.', $file = '.env')
     {
-        if (!file_exists('./.env')) {
+        if (!file_exists($path .'/'. $file)) {
             return self::$logger->trace('.env file not present');
         }
         $content = @\file_get_contents($path . $file);
@@ -110,7 +110,7 @@ class ConfigurationProvider
      *
      * @return void
      */
-    public static function init($pathConfigurationFiles, $envPath = './', $logger = null)
+    public static function init($pathConfigurationFiles, $envPath = '.', $logger = null)
     {
 
         $logger = $logger ? clone $logger : new Logger();

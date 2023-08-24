@@ -67,7 +67,7 @@ class ConfigurationProvider
         $vars = self::envParser($content);
 
         foreach ($vars as $var => $value) {
-            $_ENV[ $var ] = $value;
+            $_ENV[ $var ] = trim($value, "'\"");
         }
     }
     private static function envParser($content)
